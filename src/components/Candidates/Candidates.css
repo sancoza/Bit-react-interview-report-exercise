@@ -1,0 +1,44 @@
+main {
+  background: #3b72ca27;
+}
+/* MAIN HEADER  */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 1rem 0;
+}
+/* SERACH */
+.input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #3b71ca;
+}
+input::placeholder,
+input:focus {
+  color: #3b72ca92;
+  font-weight: bold;
+  outline: none;
+}
+/* CANDIDATES */
+.main-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 30px;
+  margin: 3rem 0;
+}
+.candidates-container {
+  border: 2px solid #3b71ca;
+  flex: 0 0 23.3333%;
+  overflow: hidden;
+  display: flex;
+ 
+  justify-content: center;
+  padding: 20px;
+}
+
+.candidates-container .img {
+  max-width: 100%;
+}
