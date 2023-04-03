@@ -26,7 +26,7 @@ export const Candidates = (props) => {
       </section>
       <setion className="main-body">
         {props.candidates
-          .slice(0, 7)
+          .slice(0, 6)
           .filter((candidate) => {
             if (search.toLocaleLowerCase() === '') {
               return candidate;
@@ -36,21 +36,18 @@ export const Candidates = (props) => {
           })
           .map((candidate) => {
             return (
-              <article
-                className="candidates-container"
-                key={candidate.id}
+              
+                <div className="card"key={candidate.id}
                 onClick={() => {
                   onCardClick(candidate.id);
-                }}
-              >
-                <div className="card">
+                }}>
                   <img className="img" src={candidate.avatar} alt="avatar" />
                   <div className="card-body">
                     <h4>{candidate.name}</h4>
                     <p>{candidate.email}</p>
                   </div>
                 </div>
-              </article>
+             
             );
           })}
       </setion>
