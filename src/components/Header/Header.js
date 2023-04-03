@@ -5,6 +5,7 @@ import './Header.css';
 export const Header = () => {
   return (
     <header>
+      <div className='container header'>
       <Link className="logo" to="/">
         {' '}
         <h1>Interviews Reports</h1>
@@ -12,6 +13,9 @@ export const Header = () => {
       <Link to="/">
         <AwesomeButton type="primary">Candidates</AwesomeButton>
       </Link>
+      </div>
+      
     </header>
   );
 };
+

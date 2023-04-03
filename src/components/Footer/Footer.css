@@ -1,6 +1,13 @@
 footer {
   margin-top: auto;
 }
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+.footer p {
+  font-size: 0.8rem;
+}
 section {
   display: flex;
 }

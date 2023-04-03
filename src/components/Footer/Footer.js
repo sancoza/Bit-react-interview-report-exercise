@@ -12,11 +12,13 @@ export const Footer = () => {
 
   return (
     <footer>
+      <div className='container footer' >
       <p>Made with <BsFillSuitHeartFill /> Bit student Sandra Balog - exercise </p>
       <section>
         <p>{curentDate}</p>
         <p>{hours}</p>
       </section>
+      </div>
     </footer>
   )
 }

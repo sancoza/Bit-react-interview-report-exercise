@@ -21,21 +21,12 @@ function App() {
   useEffect(() => {
     fetchData();
   },[]);
-  // SEARCH
-  const filterCnadidates = (e) => {
-    const filteredCandidates = candidates.filter((candidate) => {
-      return candidate.name.toLowerCase().includes(e.target.value.toLowerCase());
-    });
-    setCandidates(filteredCandidates);
-  }
-
-
 
   return (
     <div className="App">
       <Header />
       <Routes>
-        <Route path="/" element={<Candidates candidates={candidates} filterFunction ={filterCnadidates} />} />
+        <Route path="/" element={<Candidates candidates={candidates}  />} />
         <Route path="/candidates/:id" element={<SingleCandidate />} />
       </Routes>
       <Footer />
