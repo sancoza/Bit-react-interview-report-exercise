@@ -28,23 +28,22 @@ export const SingleCandidate = () => {
   }.${date.getFullYear()}`;
 
   return (
-    <section className="single-candidate">
-    
+    <section className="single-candidate container">
+    <article className='img-container'>
       <img className="img" src={SingleCandidate.avatar} alt="avatar" />
-    
-      
+    </article>
       <article>
       <div className='candidate-data'>
          <p>
           <span>
-            <BsFillPersonFill /> Name:<br></br>
+            <BsFillPersonFill /> Name:
           </span>
           {SingleCandidate.name}
         </p>
         <p>
           <span>
             <FaBirthdayCake />
-            Date of birth:<br></br>
+            Date of birth:
           </span>
           {formattedDate}
         </p>
@@ -53,13 +52,13 @@ export const SingleCandidate = () => {
             <MdEmail />
             Email:
           </span>
-          <br></br>
+          
           {SingleCandidate.email}
         </p>
         <p>
           <span>
             <MdSchool />
-            Education:<br></br>
+            Education:
           </span>
           {SingleCandidate.education}
         </p>

@@ -3,28 +3,27 @@
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  overflow: hidden;
 }
-
+.img-container {
+  flex: 0 0 35rem;
+  text-align: center;
+  padding: 30px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  background: #fff;
+}
 .single-candidate .img {
-  width: 50px;
-  padding: 20px;
-  flex: 0 0 30%;
+  max-width: 220px;
+  opacity: 0.3;
+  height: auto;
 }
 .single-candidate article {
-  flex: 0 0 70%;
+  transition: 0.3s ease;
 }
-.candidate-data {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
-}
-.candidate-data p {
-  width: 350px;
-  border: 1px solid #3b71ca;
-  padding: 4rem;
-  margin-left: 30px;
-}
-.single-candidate section p:first-child {
-  margin-right: 0;
+.single-candidate article:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
 }
