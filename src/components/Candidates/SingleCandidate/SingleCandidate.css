@@ -2,15 +2,15 @@
   display: flex;
   flex-wrap: wrap;
 }
-.row [class^="col-"] {
-  flex: 1 0 35%;
-  height: 100px;
+.row .col {
+  flex: 1 0 45%;
+
   margin: 5px;
   background-color: lightgreen;
 }
 .img-container {
   text-align: center;
-  margin: 30px;
+
   padding: 30px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   background: #fff;
@@ -27,12 +27,21 @@
   box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.25);
 }
 
+.data-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  height: 250px;
+}
 
+.data-item {
+  width: 50%;
+  background: red;
+}
 
 /* Table */
 
 table {
-  display: block;
   border-spacing: 0;
   border-collapse: collapse;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
@@ -43,7 +52,7 @@ table tr td,
 table tr th {
   border: 1px solid black;
   padding: 5px;
-  width: 300px;
+  width: 400px;
   text-align: left;
 }
 thead {

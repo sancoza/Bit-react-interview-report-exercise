@@ -34,35 +34,36 @@ export const SingleCandidate = () => {
      <div className='img-container col'>
       <img className="img" src={SingleCandidate.avatar} alt="avatar" />
      </div>
-     <div className='col'>  
-        <div className="d-flex-data">
+     <div className='col data-content'>  
+        <div className='data-item'>
             <p>
              <small><BsFillPersonFill /> </small> Name:
             </p>
             <span>{SingleCandidate.name}</span>
           </div>
-          <div className="d-flex-data">
+          <div className='data-item'>
             <p>
               <small><FaBirthdayCake /></small>
               Date of birth:
             </p>
             <span>{formattedDate}</span>
           </div>
-           <div className="d-flex">
-          <div className="d-flex-data">
+          
+          <div className='data-item'>
             <p>
               <small><MdEmail /></small>
               Email:
             </p>
             <span>{SingleCandidate.email}</span>
           </div>
-          <div className="d-flex-data">
+          <div className='data-item'>
             <p>
               <small><MdSchool /></small>
               Education:
             </p>
             <span>{SingleCandidate.education}</span>
-          </div></div>
+          </div>
+          
         </div>
 
        
