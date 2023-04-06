@@ -14,7 +14,6 @@ function App() {
     fetch('http://localhost:3333/api/candidates')
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setCandidates(data);
       });
   };

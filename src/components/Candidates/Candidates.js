@@ -28,10 +28,10 @@ export const Candidates = (props) => {
         {props.candidates
           .slice(0, 6)
           .filter((candidate) => {
-            if (search.toLocaleLowerCase() === '') {
-              return candidate;
+            if (search.trim() === '') {
+              return true;
             } else {
-              return candidate.name.toLocaleLowerCase().includes(search);
+              return candidate.name.toLocaleLowerCase().includes(search.trim().toLocaleLowerCase());
             }
           })
           .map((candidate) => {

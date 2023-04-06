@@ -4,6 +4,7 @@ import { MdEmail, MdSchool } from 'react-icons/md';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import './SingleCandidate.css';
+import { SingleCandidateReports } from './SingleCandidateReports';
 
 export const SingleCandidate = () => {
   const [SingleCandidate, setSingleCandidate] = useState(null);
@@ -13,7 +14,6 @@ export const SingleCandidate = () => {
     fetch(`http://localhost:3333/api/candidates/${params.id}`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setSingleCandidate(data);
       });
   }, [params.id]);
@@ -28,46 +28,48 @@ export const SingleCandidate = () => {
   }.${date.getFullYear()}`;
 
   return (
-    <section className="single-candidate container">
-    <article className='img-container'>
+    
+    <section className="container">
+    <div className='row flex'>
+     <div className='img-container col'>
       <img className="img" src={SingleCandidate.avatar} alt="avatar" />
-    </article>
-      <article>
-      <div className='candidate-data'>
-         <p>
-          <span>
-            <BsFillPersonFill /> Name:
-          </span>
-          {SingleCandidate.name}
-        </p>
-        <p>
-          <span>
-            <FaBirthdayCake />
-            Date of birth:
-          </span>
-          {formattedDate}
-        </p>
-        <p>
-          <span>
-            <MdEmail />
-            Email:
-          </span>
-          
-          {SingleCandidate.email}
-        </p>
-        <p>
-          <span>
-            <MdSchool />
-            Education:
-          </span>
-          {SingleCandidate.education}
-        </p>
-      </div>
+     </div>
+     <div className='col'>  
+        <div className="d-flex-data">
+            <p>
+             <small><BsFillPersonFill /> </small> Name:
+            </p>
+            <span>{SingleCandidate.name}</span>
+          </div>
+          <div className="d-flex-data">
+            <p>
+              <small><FaBirthdayCake /></small>
+              Date of birth:
+            </p>
+            <span>{formattedDate}</span>
+          </div>
+           <div className="d-flex">
+          <div className="d-flex-data">
+            <p>
+              <small><MdEmail /></small>
+              Email:
+            </p>
+            <span>{SingleCandidate.email}</span>
+          </div>
+          <div className="d-flex-data">
+            <p>
+              <small><MdSchool /></small>
+              Education:
+            </p>
+            <span>{SingleCandidate.education}</span>
+          </div></div>
+        </div>
+
        
-      </article>
-      <article className='candidate-table'>
-        
-      </article>
+     <div className='col'><h1>Reports</h1>
+        <SingleCandidateReports /></div>
+</div>
+   
     </section>
   );
 };
