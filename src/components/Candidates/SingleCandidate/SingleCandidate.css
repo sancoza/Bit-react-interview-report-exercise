@@ -1,44 +1,49 @@
+.interviews-reports h2 {
+  display: inline-block;
+}
+
 .row.flex {
   display: flex;
   flex-wrap: wrap;
 }
 .row .col {
-  flex: 1 0 45%;
-
-  margin: 5px;
-  background-color: lightgreen;
+  flex: 1 0 35%;
+  margin: 15px;
+  
 }
 .img-container {
   text-align: center;
-
   padding: 30px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   background: #fff;
-  transition: 0.3s ease;
+
 }
 .img-container .img {
   max-width: 220px;
   opacity: 0.3;
-  height: auto;
+  height: auto; 
 }
-
-.img-container:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.25);
-}
-
 .data-content {
+  width: 50%;
+  flex: 1;
   display: flex;
   flex-wrap: wrap;
-  align-content: flex-start;
-  height: 250px;
+  
 }
 
 .data-item {
   width: 50%;
-  background: red;
+  height: 140px;
 }
-
+.data-item p {
+  margin-bottom: 10px;
+  display: flex;
+  align-items:flex-start;
+}
+.data-item p small {
+  font-size: 1.2rem;
+  margin-right: 5px;
+}
 /* Table */
 
 table {
@@ -50,16 +55,16 @@ table {
 }
 table tr td,
 table tr th {
-  border: 1px solid black;
+  border: 1px solid #3B71CA;
   padding: 5px;
   width: 400px;
   text-align: left;
 }
 thead {
-  background-color: #ddd;
+  background-color: #8eb8fb8a;
 }
 tbody tr:nth-child(even) {
-  background-color: #ddd;
+  background-color: #8eb8fb8a;
 }
 
 .eye {

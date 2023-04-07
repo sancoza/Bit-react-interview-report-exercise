@@ -28,49 +28,56 @@ export const SingleCandidate = () => {
   }.${date.getFullYear()}`;
 
   return (
-    
-    <section className="container">
-    <div className='row flex'>
-     <div className='img-container col'>
-      <img className="img" src={SingleCandidate.avatar} alt="avatar" />
-     </div>
-     <div className='col data-content'>  
-        <div className='data-item'>
+    <section className="container interviews-reports">
+      <div className="row flex">
+        <div className="img-container col">
+          <img className="img" src={SingleCandidate.avatar} alt="avatar" />
+        </div>
+        <div className="col data-content">
+          <div className="data-item">
             <p>
-             <small><BsFillPersonFill /> </small> Name:
+              <small>
+                <BsFillPersonFill />{' '}
+              </small>{' '}
+              Name:
             </p>
             <span>{SingleCandidate.name}</span>
           </div>
-          <div className='data-item'>
+          <div className="data-item">
             <p>
-              <small><FaBirthdayCake /></small>
+              <small>
+                <FaBirthdayCake />
+              </small>
               Date of birth:
             </p>
             <span>{formattedDate}</span>
           </div>
-          
-          <div className='data-item'>
+
+          <div className="data-item">
             <p>
-              <small><MdEmail /></small>
+              <small>
+                <MdEmail />
+              </small>
               Email:
             </p>
             <span>{SingleCandidate.email}</span>
           </div>
-          <div className='data-item'>
+          <div className="data-item">
             <p>
-              <small><MdSchool /></small>
+              <small>
+                <MdSchool />
+              </small>
               Education:
             </p>
             <span>{SingleCandidate.education}</span>
           </div>
-          
         </div>
 
-       
-     <div className='col'><h1>Reports</h1>
-        <SingleCandidateReports /></div>
-</div>
-   
+        <div className="col">
+          <h1>Reports</h1>
+          <SingleCandidateReports />
+        </div>
+      </div>
     </section>
   );
 };
