@@ -10,9 +10,15 @@ export const Header = () => {
         {' '}
         <h1>Interviews Reports</h1>
       </Link>
-      <Link to="/">
+      <div className='candidates-btn'>
+         <Link to="/">
         <AwesomeButton type="primary">Candidates</AwesomeButton>
       </Link>
+      <Link className='margin-left' to="/reports">
+        <AwesomeButton type="primary">Reports</AwesomeButton>
+      </Link>
+      </div>
+     
       </div>
       
     </header>

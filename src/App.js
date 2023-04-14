@@ -6,6 +6,9 @@ import { SingleCandidate } from './components/Candidates/SingleCandidate/SingleC
 import { AdminDashboard } from './components/AdminDashboard/AdminDashboard';
 import { Header } from './components/Header/Header';
 import { Footer } from './components/Footer/Footer';
+import { CreateReports } from './components/AdminDashboard/CreateReports/CreateReports';
+
+
 
 function App() {
   const [admin, setAdmin] = useState([]);
@@ -18,7 +21,7 @@ function App() {
   );
 
   const FetchAdminData = () => {
-    fetch('http://localhost:3333/api/admin')
+    fetch('http://localhost:3333/api/reports')
       .then((res) => res.json())
       .then((data) => {
         setAdmin(data);
@@ -37,9 +40,11 @@ function App() {
         </Route>
 
         <Route
-          path="/admin/reports"
+          path="/reports"
           element={<AdminDashboard admin={admin} />}
         />
+       <Route path='/reports/create' element={CreateReports} />
+       <Route path={'*'} element={<h1>404 Not found</h1>} />
       </Routes>
     </div>
   );
