@@ -28,56 +28,39 @@ export const SingleCandidate = () => {
   }.${date.getFullYear()}`;
 
   return (
-    <section className="container interviews-reports">
-      <div className="row flex">
-        <div className="img-container col">
-          <img className="img" src={SingleCandidate.avatar} alt="avatar" />
-        </div>
-        <div className="col data-content">
-          <div className="data-item">
-            <p>
-              <small>
-                <BsFillPersonFill />{' '}
-              </small>{' '}
-              Name:
-            </p>
-            <span>{SingleCandidate.name}</span>
+    <div className="container">
+     
+      <div className="data">
+          <div className="data-img">
+            <img className='img' src={SingleCandidate.avatar} alt="img" />
           </div>
-          <div className="data-item">
-            <p>
-              <small>
-                <FaBirthdayCake />
-              </small>
-              Date of birth:
-            </p>
-            <span>{formattedDate}</span>
-          </div>
-
-          <div className="data-item">
-            <p>
-              <small>
+         
+        <div className="name-email">
+            <p className="name"> <small>
+                <BsFillPersonFill />
+              </small>Name:</p>
+            <p>{SingleCandidate.name}</p>
+            <p className="email"> <small>
                 <MdEmail />
-              </small>
-              Email:
-            </p>
-            <span>{SingleCandidate.email}</span>
+              </small>Email:</p>
+            <p>{SingleCandidate.email}</p>
           </div>
-          <div className="data-item">
-            <p>
-              <small>
+          <div className="birth-education">
+            <p className="birthday"> <small>
+                <FaBirthdayCake />
+              </small>Date of birth:</p>
+            <p>{formattedDate}</p>
+            <p className="education"> <small>
                 <MdSchool />
-              </small>
-              Education:
-            </p>
-            <span>{SingleCandidate.education}</span>
+              </small>Education:</p>
+            <p>{SingleCandidate.education}</p>
           </div>
         </div>
 
-        <div className="col">
           <h1>Reports</h1>
           <SingleCandidateReports />
-        </div>
-      </div>
-    </section>
+      
+ 
+    </div>
   );
 };

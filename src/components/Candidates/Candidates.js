@@ -1,56 +1,48 @@
-import { useNavigate } from 'react-router';
 import './Candidates.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import UserCard from './UserCard/UserCard';
 
-export const Candidates = (props) => {
+export const Candidates = () => {
   const [search, setSearch] = useState('');
-  console.log(search);
+  const [candidates, setCandidates] = useState([]);
 
-  // SINGLE CANDIDATE
-  const navigate = useNavigate();
-
-  const onCardClick = (id) => {
-    navigate(`/candidates/${id}`);
-  };
+  useEffect(() => {
+    fetch('http://localhost:3333/api/candidates')
+      .then((res) => res.json())
+      .then((data) => {
+        setCandidates(data);
+      });
+  });
 
   return (
-    <main className="container">
-      <section className="main-header">
-        <h3>Candidates</h3>
-        <input
-          type="text"
-          className="input"
-          placeholder="Search Candidate..."
-          onChange={(e) => setSearch(e.target.value)}
-        />
-      </section>
-      <setion className="main-body">
-        {props.candidates
-          .slice(0, 6)
-          .filter((candidate) => {
-            if (search.trim() === '') {
-              return true;
-            } else {
-              return candidate.name.toLocaleLowerCase().includes(search.trim().toLocaleLowerCase());
-            }
-          })
-          .map((candidate) => {
-            return (
-              
-                <div className="card"key={candidate.id}
-                onClick={() => {
-                  onCardClick(candidate.id);
-                }}>
-                  <img className="img" src={candidate.avatar} alt="avatar" />
-                  <div className="card-body">
-                    <h4>{candidate.name}</h4>
-                    <p>{candidate.email}</p>
-                  </div>
-                </div>
-             
-            );
-          })}
-      </setion>
-    </main>
+    <div>
+      <main className="container">
+        <section className="main-header">
+          <h3>Candidates</h3>
+          <input
+            type="text"
+            className="input"
+            placeholder="Search Candidate..."
+            onChange={(e) => setSearch(e.target.value)}
+          />
+        </section>
+        <setion className="main-body">
+          {candidates
+            .slice(0, 6)
+            .filter((candidate) => {
+              if (search.trim() === '') {
+                return true;
+              } else {
+                return candidate.name
+                  .toLocaleLowerCase()
+                  .includes(search.trim().toLocaleLowerCase());
+              }
+            })
+            .map((candidate) => {
+              return <UserCard key={candidate.id} candidate={candidate} />;
+            })}
+        </setion>
+      </main>
+    </div>
   );
 };

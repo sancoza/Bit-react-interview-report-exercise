@@ -30,7 +30,7 @@ input:focus {
   overflow: hidden;
 }
 .card {
-  flex: 1 1 20rem;
+  flex: 1 0 20rem;
   background: #fff;
   border: 1px solid #ccc;
   margin-bottom: 50px;
@@ -61,4 +61,3 @@ input:focus {
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   background: #3b72ca44;
 }
-
