@@ -1,7 +1,6 @@
-import {SelectCandidate} from '../pages/SelectCandidate';
-import {SelectCompany} from '../pages/SelectCompany';
-import {EditReportDetails} from '../pages/EditReportDetails';
-
+import { SelectCandidate } from "../pages/SelectCandidate";
+import { SelectCompany } from "../pages/SelectCompany";
+import { EditReportDetails } from "../pages/EditReportDetails";
 
 export const SidebarData = [
   {
@@ -13,9 +12,9 @@ export const SidebarData = [
         Select Candidate
       </div>
     ),
-    
+
     element: <SelectCandidate />,
-    link:'/reports/create/candidate',
+    link: "/reports/create/candidate",
   },
   {
     title: (
@@ -26,9 +25,8 @@ export const SidebarData = [
         Select Company
       </div>
     ),
-    link: '/reports/create/company',
+    link: "/reports/create/company",
     element: <SelectCompany />,
-   
   },
   {
     title: (
@@ -39,8 +37,8 @@ export const SidebarData = [
         Fill Repor Details
       </div>
     ),
-   
+
     element: <EditReportDetails />,
-    link:'/reports/create/deetails',
+    link: "/reports/create/deetails",
   },
 ];

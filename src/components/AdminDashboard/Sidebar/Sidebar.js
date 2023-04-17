@@ -1,21 +1,41 @@
-import React from 'react';
-import { SidebarData } from './SidebarData';
+import React from "react";
+import { SidebarData } from "./SidebarData";
+import { useNavigate } from "react-router";
+export const Sidebar = ({
+  onOpenNavPage,
+  onOpenSelectCandpage,
+  onEditReport,
+}) => {
+  const sideBarDataMutated = SidebarData.map((el, index) => {
+    if (index === 0) {
+      return { ...el, handler: onOpenNavPage };
+    }
+    if (index === 1) {
+      return { ...el, handler: onOpenSelectCandpage };
+    }
+    if (index === 2) {
+      return { ...el, handler: onEditReport };
+    } else {
+      return el;
+    }
+  });
 
-export const Sidebar = () => {
   return (
     <div className="sidebar">
       <ul>
-        {SidebarData.map((value, key) => {
+        {sideBarDataMutated.map((value, key) => {
           return (
-           <li key={key} onClick={()=> {
-             return value.element;
-           }}>
-            <div key={key}>
+            <li
+              key={key}
+              onClick={() => {
+                value.handler();
+                return value.element;
+              }}
+            >
+              <div key={key}>
                 <div>{value.title}</div>
               </div>
-           </li>
-              
-           
+            </li>
           );
         })}
       </ul>
