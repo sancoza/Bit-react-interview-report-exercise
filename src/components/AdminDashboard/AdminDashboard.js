@@ -12,6 +12,7 @@ export const AdminDashboard = () => {
   const [searchCandidate, setSearchCandidate] = useState('');
   const[report, setReport] = useState(null); 
   const[modal, setModal] = useState(false);
+  
   const openModal = (report) => {
     setModal(true);
     setReport(report);

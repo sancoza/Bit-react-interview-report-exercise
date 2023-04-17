@@ -10,7 +10,7 @@ export const HeaderAdmin =()=> {
       <h1>Reports Administration</h1>
     </Link>
     <div className='admin-btn'>
-      <Link to="/">
+      <Link to="/reports">
       <AwesomeButton type="primary">Reports</AwesomeButton>
     </Link>
     <Link  className='margin-left' to='/reports/create'>

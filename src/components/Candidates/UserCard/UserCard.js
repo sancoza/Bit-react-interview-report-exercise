@@ -5,7 +5,7 @@ export default function UserCard({ candidate }) {
   const navigate = useNavigate();
 
   return (
-    <div className="card"
+    <div className="card "
     onClick={() => {
       navigate(`/candidates/${candidate.id}`);
     }}>

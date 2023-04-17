@@ -15,10 +15,10 @@ export const Candidates = () => {
   });
 
   return (
-    <div>
+    <div className='candidates'>
       <main className="container">
         <section className="main-header">
-          <h3>Candidates</h3>
+          <h3 className="title">Candidates</h3>
           <input
             type="text"
             className="input"
@@ -26,7 +26,7 @@ export const Candidates = () => {
             onChange={(e) => setSearch(e.target.value)}
           />
         </section>
-        <setion className="main-body">
+        <section className="main-body">
           {candidates
             .slice(0, 6)
             .filter((candidate) => {
@@ -41,7 +41,7 @@ export const Candidates = () => {
             .map((candidate) => {
               return <UserCard key={candidate.id} candidate={candidate} />;
             })}
-        </setion>
+        </section>
       </main>
     </div>
   );

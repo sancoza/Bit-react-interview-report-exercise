@@ -1,6 +1,6 @@
 
 /* MAIN HEADER  */
-.main-header {
+.candidates .main-header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -8,19 +8,19 @@
   margin: 1rem 0;
 }
 /* SERACH */
-.input {
+.candidates .input {
   padding: 10px;
   border-radius: 5px;
   border: 2px solid #3b71ca;
 }
-input::placeholder,
-input:focus {
+.candidates .input::placeholder,
+.candidates .input:focus {
   color: #3b72ca92;
   font-weight: bold;
   outline: none;
 }
 /* CANDIDATES */
-.main-body {
+.candidates .main-body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -29,7 +29,7 @@ input:focus {
   gap: 30px;
   overflow: hidden;
 }
-.card {
+.candidates .card {
   flex: 1 0 20rem;
   background: #fff;
   border: 1px solid #ccc;
@@ -39,20 +39,20 @@ input:focus {
   padding: 40px 10px;
   cursor: pointer;
 }
-.card-body {
+.candidates .card-body {
   text-align: center;
   font-size: 16px;
   padding: 10px;
   overflow: hidden;
 }
-.card:hover {
+.candidates .card:hover {
   transform: scale(1.05);
   box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
 }
-.card p {
+.candidates .card p {
   font-size: 14px;
 }
-.card img {
+.candidates .card img{
   opacity: 0.3;
   max-width: 120px;
   height: auto;
